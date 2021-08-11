@@ -1,0 +1,16 @@
+int N = s.nextInt();
+		for(int i = 1;i<=N;++i) {
+			int j = N;
+			while(j>i) {
+				System.out.print(j);
+				--j;
+			}
+			System.out.print("*");
+			j-=1;
+			while(j>0) {
+				System.out.print(j);
+				--j;
+			}
+				
+			System.out.println();
+		}
