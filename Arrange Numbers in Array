@@ -1,0 +1,34 @@
+
+public class Solution {
+    
+    public static void arrange(int[] arr, int n) {
+    	//Your code goes here
+    	int temp=1;
+        int mod=n%2;
+        int temp2=n-mod;
+        if(mod==0)
+        {temp2-=2;}
+        for(int i=0;i<n;i++)
+        {    
+            if(i<n/2)
+            {arr[i]=temp;
+             temp+=2;
+             continue;
+            }
+            if(i==n/2)
+            {
+            arr[i]=n;
+            continue;
+            }
+            
+            if(i>n/2)
+            {
+            arr[i]=temp2;
+             temp2-=2;
+             continue;
+            }
+        }
+        
+    
+    }
+}
