@@ -1,0 +1,29 @@
+
+public class Solution{  
+    
+    public static int duplicateNumber(int arr[]) {
+    	//Your code goes here
+        int j;
+        int i;
+        boolean duplicate = false;
+        for(i = 0;i<arr.length;i++){
+            // int temp = arr[i];
+            for(j = 0;j<arr.length;j++){
+                if(i==j){
+                	continue;
+                }
+                if(arr[i]==arr[j]){
+                	duplicate = true;
+                    break;
+                }else
+                    duplicate = false;
+            }
+            if(duplicate==true)
+            {
+                
+               return arr[i];
+            }
+        }
+        return 0;
+    }
+}
