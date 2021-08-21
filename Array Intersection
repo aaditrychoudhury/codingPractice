@@ -1,0 +1,40 @@
+
+public class Solution{  
+    
+    public static void intersections(int arr1[], int arr2[]) {
+        int j;
+        int i;
+        int size1 = arr1.length;
+        int size2 = arr2.length;
+        // int size;
+        // if(size1>size2)
+        //     size = size1;
+        // else
+        //     size = size2;
+        // int[] arr = new int[size];
+        // int val =0;
+        
+        boolean duplicate = false;
+        
+        for(i = 0;i<size1;i++){
+            // int temp = arr[i];
+            for(j = 0;j<size2;j++){
+        
+                if(arr1[i]==arr2[j]){
+                	duplicate = true;
+                    arr2[j]=Integer.MIN_VALUE;
+                    break;
+                }else
+                    duplicate = false;
+            }
+            if(duplicate==true)
+            {
+                
+//                arr[val] = arr1[i];
+//                 val++;
+                System.out.print(arr1[i]+" ");
+            }
+        }
+      
+    }
+}
