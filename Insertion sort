@@ -1,0 +1,20 @@
+
+public class Solution {  
+
+    public static void insertionSort(int[] arr) {
+    	//Your code goes here
+        int j;
+        for(int i=1;i<arr.length;++i) {
+            int min = arr[i];
+            for(j =i-1;j>=0;--j){
+                if(arr[j]>min)
+                    arr[j+1] = arr[j];
+                else
+                    break;
+            }
+            arr[j+1] = min;
+        }
+			
+    }
+
+}
