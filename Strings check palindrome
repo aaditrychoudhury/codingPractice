@@ -17,3 +17,14 @@ public class Solution {
 	}
 
 }
+## one more method
+int left = 0;
+int right = str.lenght() -1;
+while(left < right){
+if(str.charAt(left) != str.charAt(right)){
+return false;}
+++left;
+--right;
+}
+return true;
+
