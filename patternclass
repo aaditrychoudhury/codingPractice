@@ -1,0 +1,57 @@
+package exc1;
+
+import java.util.Scanner;
+
+public class pattern2 {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		int n = s.nextInt();
+		if(n%2 == 0)
+			return;
+		int n1 =(n+1)/2;
+		int n2 = n1-1;
+		for(int i =1;i<=n1;++i) {
+			int t = 0;
+			for(int j = 1;j<=i;++j) {
+				System.out.print("*");
+				t++;
+			}
+				
+			for(int k = 1;k<=(n-2*i);++k) {
+				System.out.print(" ");
+				t++;
+			}
+				
+			for(int l =t;l<n;++l)
+				System.out.print("*");
+			System.out.println();
+		}
+		for(int i = n2;i>0;--i) {
+			int t =0;
+			for(int j = i;j>0;--j)
+				{System.out.print("*");
+				++t;
+				}
+			for(int k =1;k<=(n-2*i);++k)
+			{
+				System.out.print(" " );
+				++t;
+			}
+			for(int l =t;l<n;++l)
+				System.out.print("*");
+			System.out.println();
+		}
+
+	}
+
+}
+
+
+/*
+*   *
+** ** 
+***** 
+** **
+*   *
